@@ -6,6 +6,7 @@ from sqlalchemy.sql.sqltypes import Integer, String
 material_basic_details = Table(
     "material_basic_details", meta,
     Column('id', Integer, primary_key=True),
+    Column('material_code', String(45)),
     Column('material_name', String(45)),
     Column('material_unit', Integer),
     Column('material_group_code', String(45), ForeignKey('material_group_master.material_group_code'), nullable=False),

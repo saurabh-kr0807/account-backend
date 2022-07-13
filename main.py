@@ -6,7 +6,7 @@ from routes.index import organization_detail, hsn_master, material_group_masters
 
 
 app = FastAPI()
-origins = ["*"]
+origins = ['*']
 
 app.add_middleware(
     CORSMiddleware,
