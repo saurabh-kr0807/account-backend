@@ -2,8 +2,10 @@
 from fastapi import FastAPI
 import mysql.connector
 from fastapi.middleware.cors import CORSMiddleware
-from routes.index import organization_detail, hsn_master, material_group_masters, material_basic_detail, material_group_add
+from routes.index import organization_detail, hsn_master, material_group_masters, material_basic_detail, material_group_add, product_group_masters
 
+from routes.index import product_group_add
+from routes.index import product_basic_detail
 
 app = FastAPI()
 origins = ['*']
@@ -21,3 +23,6 @@ app.include_router(hsn_master)
 app.include_router(material_group_masters)
 app.include_router(material_basic_detail)
 app.include_router(material_group_add)
+app.include_router(product_group_masters)
+app.include_router(product_group_add)
+app.include_router(product_basic_detail)
